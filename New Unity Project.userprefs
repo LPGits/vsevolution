@@ -1,0 +1,25 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Drones/Orig/DroneBehavior.cs">
+    <Files>
+      <File FileName="Assets/Dice.cs" Line="27" Column="23" />
+      <File FileName="Assets/Drones/Orig/DroneBehavior.cs" Line="18" Column="33" />
+      <File FileName="Assets/Vuforia/Scripts/MultiTargetBehaviour.cs" Line="1" Column="1" />
+      <File FileName="Assets/Drones/PrefabInstantiator.cs" Line="1" Column="1" />
+      <File FileName="Assets/Cardboard/Scripts/CardboardHead.cs" Line="108" Column="1" />
+      <File FileName="Assets/Plugins/Android/AndroidManifest.xml" Line="1" Column="1" />
+      <File FileName="Assets/Vuforia/Scripts/ImageTargetBehaviour.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/TransitionManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Reticle.cs" Line="1" Column="1" />
+      <File FileName="Assets/UnitySteer-master/TickedPriorityQueue/UnityTickedQueue.cs" Line="1" Column="1" />
+      <File FileName="Assets/Drones/DroneBehavio_old.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/InitErrorHandler.cs" Line="1" Column="1" />
+      <File FileName="Assets/Cardboard/Scripts/CardboardEye.cs" Line="185" Column="31" />
+      <File FileName="Assets/Drones/Orig/SwarmBehavior.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

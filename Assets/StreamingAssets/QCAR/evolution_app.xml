@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+    <Tracking>
+        <ImageTarget name="wuerfel.Front" size="0.300000 0.300000"/>
+        <ImageTarget name="wuerfel.Left" size="0.300000 0.300000"/>
+        <ImageTarget name="wuerfel.Top" size="0.300000 0.300000"/>
+        <ImageTarget name="wuerfel.Right" size="0.300000 0.300000"/>
+        <ImageTarget name="wuerfel.Bottom" size="0.300000 0.300000"/>
+        <ImageTarget name="wuerfel.Back" size="0.300000 0.300000"/>
+        <MultiTarget name="wuerfel">
+            <Part name="wuerfel.Left" translation="-0.15000000596046448 0 0" rotation="AD: 0 1 0 -90"/>
+            <Part name="wuerfel.Right" translation="0.15000000596046448 0 0" rotation="AD: 0 1 0 90"/>
+            <Part name="wuerfel.Front" translation="0 0 0.15000000596046448" rotation="AD: 1 0 0 0"/>
+            <Part name="wuerfel.Back" translation="0 0 -0.15000000596046448" rotation="AD: 0 1 0 180"/>
+            <Part name="wuerfel.Top" translation="0 0.15000000596046448 0" rotation="AD: 1 0 0 -90"/>
+            <Part name="wuerfel.Bottom" translation="0 -0.15000000596046448 0" rotation="AD: 1 0 0 90"/>
+        </MultiTarget>
+    </Tracking>
+</QCARConfig>

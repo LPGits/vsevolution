@@ -69,12 +69,12 @@
      <None Include="Assets\Vuforia\Shaders\RenderVideoBackground.shader" />
      <None Include="Assets\Cardboard\Resources\UnlitTexture.shader" />
      <None Include="Assets\StreamingAssets\QCAR\Stones.xml" />
+     <None Include="Assets\StreamingAssets\QCAR\evolution_app.xml" />
      <None Include="Assets\Vuforia\Shaders\VideoBackground.shader" />
      <None Include="Assets\Cardboard\Legacy\Resources\GUIScreen.shader" />
      <None Include="Assets\Shaders\OverlayMesh.shader" />
      <None Include="Assets\Vuforia\Editor\WebcamProfiles\profiles.xml" />
      <None Include="Assets\Vuforia\Shaders\DepthMask.shader" />
-     <None Include="Assets\StreamingAssets\QCAR\evolution_app.xml" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
      <None Include="Assets\Shaders\BlackMask.shader" />
      <None Include="Assets\Vuforia\Shaders\ClippingMask.shader" />

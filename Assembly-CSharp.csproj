@@ -91,6 +91,7 @@
      <Compile Include="Assets\Drones\Orig\DroneBehavior.cs" />
      <Compile Include="Assets\Drones\Orig\SwarmBehavior.cs" />
      <Compile Include="Assets\Drones\PrefabInstantiator.cs" />
+     <Compile Include="Assets\Mutation.cs" />
      <Compile Include="Assets\Scripts\Autofocus.cs" />
      <Compile Include="Assets\Scripts\BlackMaskBehaviour.cs" />
      <Compile Include="Assets\Scripts\Button3D.cs" />

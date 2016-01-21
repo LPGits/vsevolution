@@ -3,6 +3,9 @@ using System.Collections;
 
 public class Dice : MonoBehaviour {
 
+	public GameObject mutationPrefab;
+
+	private GameObject ground;
 
 	private int face;
 	private Color[] colors =
@@ -21,6 +24,7 @@ public class Dice : MonoBehaviour {
 	private int frameNumberWithoutMoving;
 
 	void Start() {
+		ground = GameObject.FindGameObjectWithTag ("ground");
 		wasMoving = true;
 		isMoving = true;
 		previousLocation = transform.position;
@@ -67,30 +71,37 @@ public class Dice : MonoBehaviour {
 	}
 
 	private void updateDrones() {
-		GameObject[] drones = GameObject.FindGameObjectsWithTag ("drone");
-		int rand;
 		// Change the target and color ONLY if the state triggered from moving to not moving
 		if (wasMoving && !isMoving && GetComponent<Renderer> ().enabled) {
 			for (int i = 0; i < dronesToFeed; i++) {
+				var mutationPosition = transform.position;
+				mutationPosition.y = transform.position.y + 0.5f;
+				var mutationRotation = transform.rotation;
+				mutationRotation.y = transform.rotation.y + i * 80;
+				GameObject tempMutation = (GameObject) Instantiate(mutationPrefab);
+				tempMutation.transform.position = mutationPosition;
+				tempMutation.transform.rotation = mutationRotation;
+				tempMutation.GetComponent<Renderer> ().material.color = colors[face - 1];
+				tempMutation.GetComponent<Rigidbody> ().velocity = new Vector3 (0,1,2);
+				tempMutation.transform.parent = ground.transform.parent;
+				Debug.Log ("mutation created");
+				/*
 				rand = Random.Range (0, drones.Length);
 				drones [rand].GetComponent<DroneBehavior> ().targetPosition = startingLocation;
 				drones [rand].GetComponent<DroneBehavior> ().chaseTarget = true;
 				drones [rand].GetComponent<DroneBehavior> ().rendererColor = colors [face - 1];
+				*/
 			}
-		} else {
+		} /* else {
 			foreach(GameObject drone in drones) {
 				drone.GetComponent<DroneBehavior> ().chaseTarget = false;
 			}
 		}
+		*/
 	}
 
-	void OnCollisionEnter (Collision col)
-	{
-		Debug.Log ("Name of col: " + col.gameObject.name);
-		if(col.gameObject.name == "Drone_Prefab(Clone)")
-		{
-			col.gameObject.GetComponent<DroneBehavior> ().chaseTarget = false;
-		}
+	public void mutate() {
+		
 	}
 
 	private void calculateMovement() {
@@ -100,7 +111,7 @@ public class Dice : MonoBehaviour {
 			frameNumberWithoutMoving = 0;
 			isMoving = true;
 		}
-		if (frameNumberWithoutMoving == movingFramesLimit) {
+		if ((frameNumberWithoutMoving == movingFramesLimit) && GetComponent<Renderer> ().enabled) {
 			frameNumberWithoutMoving = 0;
 			wasMoving = isMoving;
 			isMoving = false;

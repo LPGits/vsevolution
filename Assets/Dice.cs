@@ -9,7 +9,7 @@ public class Dice : MonoBehaviour {
 
 	private int face;
 	private Color[] colors =
-		new Color[] {Color.black, Color.blue, Color.green, Color.red, Color.yellow, Color.cyan};
+		new Color[] {Color.magenta, Color.blue, Color.green, Color.red, Color.yellow, Color.cyan};
 
 	private float noMovementThreshold = 0.02f;
 	private bool isMoving;
@@ -82,9 +82,11 @@ public class Dice : MonoBehaviour {
 				tempMutation.transform.position = mutationPosition;
 				tempMutation.transform.rotation = mutationRotation;
 				tempMutation.GetComponent<Renderer> ().material.color = colors[face - 1];
-				tempMutation.GetComponent<Rigidbody> ().velocity = new Vector3 (0,1,2);
+				tempMutation.GetComponent<Rigidbody> ().velocity = new Vector3 (Random.Range (-4, 4),1,Random.Range (-4, 4));
 				tempMutation.transform.parent = ground.transform.parent;
-				Debug.Log ("mutation created");
+				tempMutation.GetComponent<Mutation> ().mutationIndex = face-1;
+				tempMutation.GetComponent<Mutation> ().mutationColors = colors;
+				Debug.Log ("mutation created, face: " + face);
 				/*
 				rand = Random.Range (0, drones.Length);
 				drones [rand].GetComponent<DroneBehavior> ().targetPosition = startingLocation;

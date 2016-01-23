@@ -42,7 +42,6 @@ public class DroneBehavior : MonoBehaviour {
 	{
 		// we should always apply physics forces in FixedUpdate
 		Flock();
-		GetComponent<Renderer>().material.color = rendererColor;
 	}
 
 	protected virtual void Start()
